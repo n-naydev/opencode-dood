@@ -8,5 +8,5 @@ for arg in "$@"; do
   fi
 done
 
-# Build the Gemini CLI image
-docker build $BUILD_ARGS -t gemini-image .
+# Build the OpenCode CLI image
+docker build $BUILD_ARGS -t opencode-image .

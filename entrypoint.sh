@@ -11,12 +11,12 @@ echo "Initializing container for UID: $USER_ID, GID: $GROUP_ID"
 
 # Create Group if missing
 if ! getent group "$GROUP_ID" >/dev/null; then
-    groupadd -g "$GROUP_ID" geminigroup
+    groupadd -g "$GROUP_ID" opencodegroup
 fi
 
 # Create User if missing
 if ! id -u "$USER_ID" >/dev/null 2>&1; then
-    useradd -u "$USER_ID" -g "$GROUP_ID" -m -s /bin/bash geminiuser
+    useradd -u "$USER_ID" -g "$GROUP_ID" -m -s /bin/bash opencodeuser
 fi
 USERNAME=$(getent passwd "$USER_ID" | cut -d: -f1)
 
@@ -55,16 +55,16 @@ exec gosu "$USERNAME" /bin/bash -c '
         fi
     fi
 
-    echo "Running command: gemini $@"
+    echo "Running command: opencode $@"
     
-    # Run the Gemini tool
-    gemini "$@"
+    # Run the OpenCode tool
+    opencode "$@"
     EXIT_CODE=$?
 
     # Error Handling
     if [ $EXIT_CODE -ne 0 ]; then
         echo ""
-        echo "❌ Gemini exited with error code $EXIT_CODE"
+        echo "❌ OpenCode exited with error code $EXIT_CODE"
         echo "   Spawning a rescue shell so you can check logs/files..."
         exec /bin/bash
     fi

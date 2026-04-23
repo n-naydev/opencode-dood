@@ -1,6 +1,6 @@
-# Gemini CLI Guidelines
+# OpenCode CLI Guidelines
 
-This project operates within a **Docker-out-of-Docker (DooD)** setup. The Gemini CLI runs inside a container that has access to the host's Docker socket, allowing it to manage other Docker containers.
+This project operates within a **Docker-out-of-Docker (DooD)** setup. The OpenCode CLI runs inside a container that has access to the host's Docker socket, allowing it to manage other Docker containers.
 
 ## Project Requirements
 
@@ -35,4 +35,4 @@ networks:
 All build, test, and run commands must be executed inside a container (typically via `docker compose run` or `docker compose exec`). This ensures that the host system remains clean and dependencies are managed consistently.
 
 ---
-*Note: This file serves as a guide for the Gemini CLI and developers working within this environment.*
+*Note: This file serves as a guide for the OpenCode CLI and developers working within this environment.*
