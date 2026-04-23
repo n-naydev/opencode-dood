@@ -1,0 +1,6 @@
+.Dockerfile.swp
+.gemini_key
+.env
+node_modules/
+*.log
+.gemini/
