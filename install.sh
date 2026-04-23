@@ -7,10 +7,10 @@ BASHRC="$HOME/.bashrc"
 
 echo "Installing OpenCode CLI wrapper..."
 
-# Ensure ~/.opencode/instructions exists and copy OPENCODE.md there
-mkdir -p "$HOME/.opencode/instructions"
-cp "$INSTALL_DIR/OPENCODE.md" "$HOME/.opencode/instructions/OPENCODE.md"
-echo "✅ Copied OPENCODE.md to $HOME/.opencode/instructions/OPENCODE.md"
+# Ensure ~/.opencode exists and copy AGENTS.md there
+mkdir -p "$HOME/.opencode"
+cp "$INSTALL_DIR/AGENTS.md" "$HOME/.opencode/AGENTS.md"
+echo "✅ Copied AGENTS.md to $HOME/.opencode/AGENTS.md"
 
 # Check if the script is already sourced in .bashrc
 if grep -q "source \"$SCRIPT_PATH\"" "$BASHRC"; then

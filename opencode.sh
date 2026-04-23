@@ -40,7 +40,6 @@ function opencode() {
     -e HOST_UID=$(id -u) \
     -e HOST_GID=$(id -g) \
     -e OPENCODE_API_KEY="$API_KEY" \
-    -e OPENCODE_SYSTEM_MD="/home/opencodeuser/.opencode/instructions/OPENCODE.md" \
     -e NPM_CONFIG_UPDATE_NOTIFIER=false \
     -e COLORTERM=truecolor \
     -v /var/run/docker.sock:/var/run/docker.sock \
