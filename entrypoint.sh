@@ -37,6 +37,7 @@ fi
 # --------------------------------------------------------
 export HOME="/home/$USERNAME"
 export SHELL=/bin/bash
+chown -R "$USERNAME:$GROUP_ID" "$HOME" || true
 
 # --------------------------------------------------------
 # 4. EXECUTE AS USER
