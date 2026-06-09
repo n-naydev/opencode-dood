@@ -9,7 +9,6 @@ This project provides a Dockerized setup for the OpenCode CLI, ensuring a consis
 ## Prerequisites
 
 - Docker
-- OpenCode API Key
 
 ## Usage
 
