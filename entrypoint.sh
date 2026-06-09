@@ -43,8 +43,8 @@ chown -R "$USERNAME:$GROUP_ID" "$HOME" || true
 # 4. EXECUTE AS USER
 # --------------------------------------------------------
 # We pass execution to the user.
-# The inner script runs gemini, captures the exit code,
-# and drops into a shell if gemini crashes.
+# The inner script runs opencode, captures the exit code,
+# and drops into a shell if opencode crashes.
 
 exec gosu "$USERNAME" /bin/bash -c '
     # Auto-detect Docker API version to prevent client/server mismatch errors
